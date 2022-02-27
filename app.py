@@ -74,7 +74,7 @@ class set_up:
                 to_event_time[i.schedules_name]=[str(i.schedules_dt)[-8::1],i.schedules_status,i.schedules_number]
             leng=[len(list(y_event_time.keys())),len(list(t_event_time.keys())),len(list(to_event_time.keys()))]
             return render_template('index.html',yet=y_event_time,tet=t_event_time,toet=to_event_time,l=leng)
-
+        app.run()
 class user(db.Model):
 
     __tablename__='user_info'
@@ -99,7 +99,5 @@ class schedules_details(db.Model):
         self.schedules_dt=dt
         self.schedules_name=name
 
-if __name__ == '__main__':
-    set_up()
-    db.create_all()
-    app.run(debug=True)
+
+set_up()
