@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect,url_for,jsonify
+from flask import Flask,render_template,request,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 import re
 from datetime import datetime
